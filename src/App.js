@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import {StatusBar} from "expo-status-bar";
+import {StyleSheet, Text, View} from "rect-native";
+import {FitnessContext} from "./Context";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import HomeScreen from "./screens/HomeScreen";
+import StackNavigator from "./StackNavigator"; 
+
+export default function App(){
+  return(
+    <FitnessContext>
+      <StackNavigator/>
+    </FitnessContext>
   );
 }
-
-export default App;
+const styles = StyleSheet.create({
+  container:{
+    backgroundColor:"#fff",
+  },
+});
